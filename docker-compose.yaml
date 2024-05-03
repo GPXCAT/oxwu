@@ -1,0 +1,16 @@
+services:
+  new-taipei-xindian:
+    image: jscat/oxwu
+    privileged: true
+    shm_size: 512m
+    environment:
+      TZ: Asia/Taipei
+      VNC_PW: password
+      OXWU_NOTIFY_TOKEN: "[line notify token here]"
+      OXWU_TOWN_NAME: "新北市新店區" # 所在地名稱(用於Notify)
+      OXWU_TOWN_ID: 6500600 # 所在地代號
+      OXWU_ALERT_INTENSITY: 1 # 預警震度 0~7 級(含以上)
+      OXWU_XCLOCK: true # 左上角顯示時鐘
+      OXWU_RTMP_URL: "rtmp://a.rtmp.youtube.com/live2/XXXXXXXXX" # (選用) 直播網址，未帶入則不使用
+    ports:
+      - 6901:6901
