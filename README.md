@@ -35,7 +35,7 @@ services:
       OXWU_RTMP_URL: "rtmp://a.rtmp.youtube.com/live2/XXXXXXXXX" # (選用) 直播網址，未帶入則不使用
     ports:
       - 6901:6901
-    volumes: # (選用) 若要自行指定觸發後的行為可以掛載進去
+    volumes: # (選用) 若要自行指定觸發後的行為可以掛載進去, 不掛載的話就只會發 LINE Notify
       - ./notify.sh:/app/notify.sh
 
   hualien-yuli:
