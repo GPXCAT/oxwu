@@ -14,7 +14,7 @@ docker run --rm -it --privileged --shm-size=512m \
     -e OXWU_ALERT_INTENSITY="1" \
     -e OXWU_XCLOCK=true \
     -e OXWU_RTMP_URL="rtmp://a.rtmp.youtube.com/live2/XXXXXXXXX" \ # (選用) 直播網址，未帶入則不使用
-    -v ./notify.sh:/app/notify.sh \ # (選用) 若要自行指定觸發後的行為可以掛載進去
+    -v ./notify.sh:/app/notify.sh \ # (選用) 若要自行指定觸發後的行為可以掛載進去, 不掛載的話就只會發 LINE Notify
     jscat/oxwu:latest
 ```
 ## 執行 Docker 影像檔(多個)
